@@ -984,15 +984,19 @@
             </li>
           </ul>
         </div>
-        <div class="contact-right fade-up">
+         <div class="contact-right fade-up">
           <h4>Send a message</h4>
           <p>Prefer to reach out directly? Fill in your details and I'll get back to you.</p>
-          <div class="field-group">
-            <input type="text" placeholder="Your name" autocomplete="name" />
-            <input type="email" placeholder="Your email" autocomplete="email" />
-            <textarea rows="5" placeholder="Your message"></textarea>
-          </div>
-          <button class="btn-primary" style="width:100%">Send Message</button>
+           <form action="https://api.web3forms.com/submit" method="POST">
+           <input type="hidden" name="access_key" value="768fd611-f71c-4c01-853e-23fb268cfa10" />
+            <input type="hidden" name="subject" value="New message from Portfolio" />
+              <div class="field-group">
+               <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+               <input type="email" name="email" placeholder="Your email" autocomplete="email" required />
+               <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+             </div>
+            <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
